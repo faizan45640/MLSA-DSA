@@ -28,9 +28,11 @@ public:
 
         Node *heads[3];
         Node *nexttemp, ptr;
-        heads[0] = NULL;
+        
+
         for (int i = 0; i < 3; i++)
         {
+            heads[i] = NULL;
             for (int j = 0; j < 3; j++)
             {
                 Node *ptr = new Node(arr[i][j]);
@@ -68,15 +70,21 @@ public:
         down=head;
          
         while(down){
-            cout<<endl;
+            
             right=down;
             while(right){
                 cout<<right->data<<"->";
                 right=right->next;
 
             }
-           
+            
+            cout<<endl;
+            for(int i=0 ; i<3 ; i++){
+                cout<<"|  ";
+            }
+            cout<<endl;
             down=down->below;
+
             
         }
 
